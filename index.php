@@ -348,6 +348,62 @@
       text-shadow: 0 0 10px #fbbf24;
     }
 
+    .lab-card5 {
+      height: 300px;
+      width: 250px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      gap: 12px;
+      background: rgba(15, 8, 25, 0.85);
+      padding: 25px 20px;
+      text-align: center;
+      border: 2px solid #6e00ff;
+      border-radius: 16px;
+      box-shadow: 0 0 15px #6e00ff;
+      transition: all 0.3s ease;
+      font-size: 18px;
+      overflow: hidden;
+      z-index: 1;
+      margin-bottom:20px;
+    }
+
+    .lab-card5:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 30px #ff0080;
+    }
+
+    .lab-card5::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url('333fafd8496c9bfb14348836f3c6aca7.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .lab-card5 a {
+      display: block;
+      color: #fbbf24;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      z-index: 2;
+      transition: 0.3s;
+    }
+
+    .lab-card5 a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 10px #fbbf24;
+    }
+
 
     @media (max-width: 600px) {
       li {
@@ -383,13 +439,18 @@
     <li>
         <div class="lab-card3">
             <a href="news/news.php">Лабораторная работа №4</a>
-            <a href="https://www.plantuml.com/plantuml/svg/TP71IiD048RlUOgvcI3x0Zb8AHxqu4szbZ6xbC0caTs94goWddq4mLSGQK4e-WoJDt8IjzrAwHuMzf-FVsR-dNX2Hsrba-G8b5B0R_p3IrxnkdyTXAImw3rSDDfOU4X0ZWADX3cWSzYDoZ7CPaLJUt9jGMaMDDkWFXKotS6p7EwQKWTYRcW4ib2DyfKtRjgTwxJKc-AYRgtzJ_XfTzdTcfJasdey9c7cWOXpxqyfO4IKMfoCMyOatlidoM7PF_Sl_C6Vl9RNDt_nQim5RyG82uA_PjUbkT_cKmq-UR3RRxrRteJbJAsD6v8GgApdSOqpgcnmFunEH9DV_0K0">Лабораторная работа №4 (диаграмма)</a>
+            <a href="https://www.plantuml.com/plantuml/svg/lP2n2W8n44Jx_Oejhl1Ghx4JYqDi11743mWnMOz0J2IxfuZwxqR92Vw0gJ83RtQObaKdwKyUm0MXTDI6SBsbAw-MU0VCRuoiB_IsHfKuyJJ1ocYXBgPR_bfYaznPN0nPSUoJeRg07Sc76xGbJrAYdAtX2M2yPiQVWrDKzZ37_MxZX6O5LSh4m99w8zyufImDrX-g3hCi7arJ6WEq56oUxmK0">Лабораторная работа №4 (диаграмма)</a>
         </div>
     </li>
     <li>
         <div class="lab-card4">
             <a href="lab5/lab5.php">Лабораторная работа №5</a>
-            <a href="https://www.plantuml.com/plantuml/svg/pPEnRXD148RxUufH6X9XtD1P0YLHA29191HwQtqtd5QSzs1spy429Dj2K514I1I8fp2GI2R6UORPDsBss3jp0b77bVVp_BCp_x_UjqwHgyP5ajm2_imRl-1BF_Dl-P9_-3dm1Q_zEVWPB_ahN_k5_m01R_YQlybvBkISV_8gqSOXFLKfml49djcZGtYLW7nkWrKJ36ZNQLVW0AmZRV8UfCfXNj9q0ABjGOOs9VtSwT9iQsnPKTfgzWOmAiiYzitHrMs5AY8rZJZ30jtl2tLMzsvaR-ebl_2Qbtx-d-K-ygVEXi6B92sKjT1PxGuS7GvF3XuzQEQ3Ux1ZfAAVZNPYnJ0R3U3qyKFjy6v4ydLikpCFXsbff4ULkjszcsPRApjsICgL5AHFICOZgqO51b-ZB_t-w_jD_bqMfGTvJfZB1l-EWh-Brvlm0eM_unMlWAyaXYLVr6WHGW7_dbT-BfNhyEkIhq3Eab9JucTDMjLuX6HFNrIAC6jJgzzylM84QB8_Zsb5X2PM_1tGLjvhbKreX6VQPC6WIQcp22UgqC8wTiOx0jtUyWodNM3mfMkRYStTXRhM9ic-J2D_vLy0">Лабораторная работа №5 (диаграмма)</a>
+            <a href="https://www.plantuml.com/plantuml/svg/dP0n3i8m34NtdC9ZAw07O41TMLWuG9KcHef84-4afQXmTz88B8IOsEndVp_9ROYIOXgiK5Q608Sqz4ZXU4cIKCCi03PWN8IonnqwpRLAHEYMsGgwJdaN8YKLAqwjtv6wx11UZTDLlONH6rtGAAqffFVU5l8wcjaIBkYCjy_MuHJvo4E8p95EKY7iSo6Z9vZ_yWrcGir61h-SNzzgclkExQ95f_DZdm00">Лабораторная работа №5 (диаграмма)</a>
+        </div>
+    </li>
+    <li>
+        <div class="lab-card5">
+            <a href="lab6/index.php">Лабораторная работа №6</a>
         </div>
     </li>
   </ul>
