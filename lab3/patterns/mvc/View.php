@@ -1,6 +1,6 @@
 <?php
 
-// Base view class
+// Базовый класс представления (View)
 abstract class View {
     protected $model;
     
@@ -8,16 +8,17 @@ abstract class View {
         $this->model = $model;
     }
     
+    // Абстрактный метод отображения
     abstract public function render();
 }
 
-// HTML View implementation
+// Реализация представления в формате HTML
 class HtmlView extends View {
     public function render() {
         $data = $this->model->getData();
-        $output = "<h1>User List</h1>\n";
+        $output = "<h1>Список пользователей</h1>\n";
         $output .= "<table border='1'>\n";
-        $output .= "<tr><th>ID</th><th>Name</th><th>Email</th><th>Type</th></tr>\n";
+        $output .= "<tr><th>ID</th><th>Имя</th><th>Email</th><th>Тип</th></tr>\n";
         
         foreach ($data as $user) {
             $output .= "<tr>";
@@ -33,25 +34,25 @@ class HtmlView extends View {
     }
 }
 
-// JSON View implementation
+// Реализация представления в формате JSON
 class JsonView extends View {
     public function render() {
         return json_encode($this->model->getData(), JSON_PRETTY_PRINT);
     }
 }
 
-// Text View implementation
+// Реализация представления в текстовом формате
 class TextView extends View {
     public function render() {
         $data = $this->model->getData();
-        $output = "USER LIST\n";
-        $output .= "=========\n\n";
+        $output = "СПИСОК ПОЛЬЗОВАТЕЛЕЙ\n";
+        $output .= "====================\n\n";
         
         foreach ($data as $user) {
             $output .= "ID: " . $user['id'] . "\n";
-            $output .= "Name: " . $user['name'] . "\n";
+            $output .= "Имя: " . $user['name'] . "\n";
             $output .= "Email: " . $user['email'] . "\n";
-            $output .= "Type: " . $user['type'] . "\n";
+            $output .= "Тип: " . $user['type'] . "\n";
             $output .= "------------------------\n";
         }
         
@@ -59,17 +60,17 @@ class TextView extends View {
     }
 }
 
-// Markdown View implementation (new for lab assignment)
+// Реализация представления в формате Markdown (новое для лабораторной работы)
 class MarkdownView extends View {
     public function render() {
         $data = $this->model->getData();
-        $output = "# User List\n\n";
+        $output = "# Список пользователей\n\n";
         
-        // Table header
-        $output .= "| ID | Name | Email | Type |\n";
-        $output .= "|:---|:-----|:------|:-----|\n";
+        // Заголовок таблицы
+        $output .= "| ID | Имя | Email | Тип |\n";
+        $output .= "|:---|:----|:------|:-----|\n";
         
-        // Table rows
+        // Строки таблицы
         foreach ($data as $user) {
             $output .= "| " . $user['id'] . " | ";
             $output .= $user['name'] . " | ";
@@ -77,13 +78,13 @@ class MarkdownView extends View {
             $output .= $user['type'] . " |\n";
         }
         
-        // Additional info in markdown format
-        $output .= "\n## Summary\n\n";
-        $output .= "Total users: **" . count($data) . "**\n\n";
+        // Дополнительная информация в формате Markdown
+        $output .= "\n## Сводка\n\n";
+        $output .= "Всего пользователей: **" . count($data) . "**\n\n";
         
-        // Count users by type
+        // Подсчёт количества пользователей по типу
         $types = array_count_values(array_column($data, 'type'));
-        $output .= "### User Types:\n\n";
+        $output .= "### Типы пользователей:\n\n";
         
         foreach ($types as $type => $count) {
             $output .= "* **" . ucfirst($type) . "**: " . $count . "\n";
@@ -91,4 +92,4 @@ class MarkdownView extends View {
         
         return $output;
     }
-} 
+}

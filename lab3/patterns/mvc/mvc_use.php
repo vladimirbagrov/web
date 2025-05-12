@@ -2,33 +2,43 @@
 
 require_once 'Controller.php';
 
-// Create a user controller
+// Создание контроллера пользователей
 $controller = new UserController();
 
-// Display user data using different views
-echo "Displaying User Data in Different Formats\n";
-echo "========================================\n\n";
+// Вывод данных пользователей в различных форматах
+echo '<pre>';
+echo "Вывод данных пользователей в разных форматах\n";
+echo "===========================================\n\n";
+echo '</pre>';
 
-echo "HTML VIEW:\n";
-echo "----------\n";
+echo '<pre>';
+echo "HTML-ПРЕДСТАВЛЕНИЕ:\n";
+echo "-------------------\n";
 echo $controller->displayHtml();
 echo "\n\n";
+echo '</pre>';
 
-echo "JSON VIEW:\n";
-echo "----------\n";
+echo '<pre>';
+echo "JSON-ПРЕДСТАВЛЕНИЕ:\n";
+echo "-------------------\n";
 echo $controller->displayJson();
 echo "\n\n";
+echo '</pre>';
 
-echo "TEXT VIEW:\n";
-echo "----------\n";
+echo '<pre>';
+echo "ТЕКСТОВОЕ ПРЕДСТАВЛЕНИЕ:\n";
+echo "-------------------------\n";
 echo $controller->displayText();
 echo "\n\n";
+echo '</pre>';
 
-echo "MARKDOWN VIEW (New Implementation):\n";
-echo "--------------------------------\n";
+echo '<pre>';
+echo "MARKDOWN-ПРЕДСТАВЛЕНИЕ (новая реализация):\n";
+echo "------------------------------------------\n";
 echo $controller->displayMarkdown();
 echo "\n\n";
+echo '</pre>';
 
-// You could also save the markdown output to a file if needed
+// Также можно сохранить Markdown-вывод в файл при необходимости
 $markdownOutput = $controller->displayMarkdown();
-file_put_contents(__DIR__ . '/users.md', $markdownOutput); 
+file_put_contents(__DIR__ . '/users.md', $markdownOutput);

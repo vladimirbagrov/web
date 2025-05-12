@@ -1,6 +1,5 @@
 <?php
 
-// User data
 return [
     [
         'id' => 1,

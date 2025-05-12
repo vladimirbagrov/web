@@ -1,15 +1,15 @@
 <?php
 
-// User interface
+// Интерфейс пользователя
 interface User {
-    public function getId(): int;
-    public function getName(): string;
-    public function getEmail(): string;
-    public function getType(): string;
-    public function getInfo(): string;
+    public function getId(): int;              // Получить ID пользователя
+    public function getName(): string;         // Получить имя пользователя
+    public function getEmail(): string;        // Получить email пользователя
+    public function getType(): string;         // Получить тип пользователя
+    public function getInfo(): string;         // Получить информацию о пользователе
 }
 
-// Admin user
+// Администратор
 class AdminUser implements User {
     private $id;
     private $name;
@@ -34,15 +34,15 @@ class AdminUser implements User {
     }
 
     public function getType(): string {
-        return 'admin';
+        return 'admin';                         // Тип пользователя — администратор
     }
 
     public function getInfo(): string {
-        return "ADMIN: {$this->name} (ID: {$this->id}) - {$this->email}";
+        return "ADMIN: {$this->name} (ID: {$this->id}) - {$this->email}";  // Информация о пользователе
     }
 }
 
-// Customer user
+// Клиент
 class CustomerUser implements User {
     private $id;
     private $name;
@@ -67,15 +67,15 @@ class CustomerUser implements User {
     }
 
     public function getType(): string {
-        return 'customer';
+        return 'customer';                      // Тип пользователя — клиент
     }
 
     public function getInfo(): string {
-        return "CUSTOMER: {$this->name} (ID: {$this->id}) - {$this->email}";
+        return "CUSTOMER: {$this->name} (ID: {$this->id}) - {$this->email}";  // Информация о пользователе
     }
 }
 
-// Manager user
+// Менеджер
 class ManagerUser implements User {
     private $id;
     private $name;
@@ -100,10 +100,10 @@ class ManagerUser implements User {
     }
 
     public function getType(): string {
-        return 'manager';
+        return 'manager';                       // Тип пользователя — менеджер
     }
 
     public function getInfo(): string {
-        return "MANAGER: {$this->name} (ID: {$this->id}) - {$this->email}";
+        return "MANAGER: {$this->name} (ID: {$this->id}) - {$this->email}";  // Информация о пользователе
     }
-} 
+}

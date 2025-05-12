@@ -383,13 +383,13 @@
     <li>
         <div class="lab-card3">
             <a href="news/news.php">Лабораторная работа №4</a>
-            <a href="https://plantuml.online/svg/oymhIIrAIqnELV3qIoqlTd5IgEPIKD0kJYnB1V4rD46yzDGI12SbDIUr12PPoyMLd9DONAo0f5atFYN9IY4uq2Up9DMOHCDWZh2fqTE3cWa0">Лабораторная работа №4 (диаграмма)</a>
+            <a href="https://plantuml.online/svg/jP9RIm915CVVzrCSy24baxOBXKJW9K6eAApdPN97NLntOcTBw0Af4GIHhn7qq3SmkscXd-7CD-hiQfeLlRN3NkOtvx_x_v_PAS0xRAcQggipx6CNtx03s5TrcZmGQk4BFcCFEwe9gaRm4T_zUa9zK6UgGO8-jkbyyb-2RTM0BPivtkx6kYRBbhFFN5Q1Omtea2LcYghb5A70RCa3nbnNL5F25Yw4z6L_ZF5EoSgN7IubwB7P0ETj9cLIk2PtVse6YonVBhhYm3671HdT7-E2Z72yd7N4GLy8eELut2smFFzBEIxwvTkdcZO5U8CzolzCFJcdZdLL3RARl2hJIMqa_YImiWBXR3IKN4WihIr6O7Lrs233g72l94nf6C5y6YGxvBue78d3eR3C8IvoxnTgSfjxa-K3RxU3JIDF0mDHsZeosIBSmLVLKDVgafwwG9TlARIWQV35U2eQIgJJUd9kmdZ1ulR8zmmOvbuSSjlhbiVd0_Il-UxflsjIaAk9N1JvWkuTRTJsarXicEG3">Лабораторная работа №4 (диаграмма)</a>
         </div>
     </li>
     <li>
         <div class="lab-card4">
             <a href="lab5/lab5.php">Лабораторная работа №5</a>
-            <a href="https://plantuml.online/svg/dLBDJi904BxlKymDYCZ56_7Ypq4IOp0y02djs3I15dSNZL4J81eF74Wy4HFV0Gb4aD1dc7qZfxG50UF1FUtEpCvytpTV1cX02zEbYMcR9vhGp7I05XJIY4BJuKHqdm5zq90-JKzulaPvPTa8fGkyLQV7S2-0pvwoRZ2APBMdwvW7szBe1l8k3mugMtfDxGL-7bJGaZRcuZykwkMNvEbW7NNSn7Doub683D0RpMd8I3eh341ZlYmOTiyyRu9b_CAkMqf10ivhDElOG5-hBRpxK7LgHQXSddiQ3-BvKAtQWQ-qRDawnSGnnhyP-WzLsE8AMsHNHITnCm_NfHmjiUgM3cGsbMKGxuobwJBtTgJ9tFI1lbYB8OtJ38t0lD3KT5YQUIfDgr53gIhNBKkYiz93QKlg8l22am3wplgvASwoDXzL_8NnDTe98mbv-79TaP6cEtOhdvL_sYhfSkIw4bqM8pNOhoFU8s-mGoRCFrnINp3RlaYNVVXGA2HU4BkTu-o67E8R">Лабораторная работа №5 (диаграмма)</a>
+            <a href="https://plantuml.online/svg/lLJBRjD05DtxAwwKHHDX8W95eAYgb0UL8XK42gojgJrnHd4yPMRIY9VKD6nOGBS8YGL_40ff4w3vXfa_ulhH96uJA1jYnVASUy_rd7kkPmFqPpqo0tDa3lLCJ_KFFG4zCqUu-8hGI9_giJxN4tCCPe3WD_qpoaTe1kRG394mqoVu_nuLqITc28y34gfd3tSjsM7XFX6a2wyim9zi4u_tMUX3YmIInXWHWlThFE02SgNxqRM0dxQPsmcfb50gtefXDo1ILhdmgBZAIOB4xVY2zq8lJTWfHTSYOOU7gibUKYXjnY0B5HKjuj8_CHT9Azxznh8sG7_KvwX_Z3rvYnsRcW4q7j6-h5UjEVa2WQqjo3ViN7MpSk_1tG9iRwSDSfmkLMtkISU9rpT0aWCQaVAAgO3Qu195VIvUsE1HwGgshnWFRP2y9rnQACC1PrvAzQcAcLdKem5LIKdcNOGI1PyIQt7doJPjD1YbZ12Uw3CpD1_CEtoQ0jxMQOrR34ioQtQkKg-NghSpCbkC1dELDy7nzihGVBBB5BqJGskwuJWk3wKIFLVb2tCCEv65_a_JveHQKfxHopICDT1wehZ8PrkzObZIn8hl2-fZnUMnkHpxXm5QluSbktlTFIfaytcF2EgjjVtg5bEtC_JhkouL4QeSVLifG4DliRp62CG5x8XM-AlQBtWq7Ukpw7JxXUfEyRmQWdcF8iSn4FanmgU9DVz8NnUBwIHRAno8endblm40">Лабораторная работа №5 (диаграмма)</a>
         </div>
     </li>
   </ul>

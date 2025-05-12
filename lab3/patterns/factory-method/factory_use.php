@@ -2,32 +2,40 @@
 
 require_once 'UserFactory.php';
 
-// Load users data
+// Загрузка данных пользователей
 $usersData = require_once 'users.php';
 
-// Create a user factory
+// Создание фабрики пользователей
 $userFactory = new ConcreteUserFactory();
 
-// Display information about all users
-echo "User Information:\n";
-echo "================\n";
+// Вывод информации обо всех пользователях
+echo '<pre>';
+echo "Информация о пользователях:\n";
+echo "===========================\n";
+echo '</pre>';
 
 foreach ($usersData as $userData) {
-    // Create a user object using the factory
+    // Создание объекта пользователя с помощью фабрики
     $user = $userFactory->getUser($userData);
     
-    // Display user information
+    // Вывод информации о пользователе
+    echo '<pre>';
     echo $user->getInfo() . "\n";
+    echo '</pre>';
 }
 
-// Demonstrate using the factory for a specific user type
-echo "\nAccessing specific user properties:\n";
-echo "================================\n";
+// Демонстрация использования фабрики для конкретного типа пользователя
+echo '<pre>';
+echo "\nДоступ к свойствам конкретного пользователя:\n";
+echo "===========================================\n";
+echo '</pre>';
 
-$adminData = $usersData[0]; // Getting the first user (admin)
+$adminData = $usersData[0]; // Получение данных первого пользователя (администратора)
 $admin = $userFactory->getUser($adminData);
 
-echo "User ID: " . $admin->getId() . "\n";
-echo "User Name: " . $admin->getName() . "\n";
-echo "User Email: " . $admin->getEmail() . "\n";
-echo "User Type: " . $admin->getType() . "\n"; 
+echo '<pre>';
+echo "ID пользователя: " . $admin->getId() . "\n";
+echo "Имя пользователя: " . $admin->getName() . "\n";
+echo "Email пользователя: " . $admin->getEmail() . "\n";
+echo "Тип пользователя: " . $admin->getType() . "\n"; 
+echo '</pre>';

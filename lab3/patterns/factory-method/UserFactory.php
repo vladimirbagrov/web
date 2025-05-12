@@ -2,18 +2,21 @@
 
 require_once 'User.php';
 
-// Abstract factory class
+// Абстрактная фабрика пользователей
 abstract class UserFactory {
+    // Абстрактный метод создания пользователя
     abstract public function createUser(array $data): User;
 
+    // Метод получения пользователя (использует createUser)
     public function getUser(array $data): User {
         return $this->createUser($data);
     }
 }
 
-// Concrete factory for creating users based on type
+// Конкретная фабрика для создания пользователей на основе типа
 class ConcreteUserFactory extends UserFactory {
     public function createUser(array $data): User {
+        // Выбор типа пользователя и создание соответствующего экземпляра
         switch ($data['type']) {
             case 'admin':
                 return new AdminUser($data);
@@ -24,4 +27,4 @@ class ConcreteUserFactory extends UserFactory {
                 return new CustomerUser($data);
         }
     }
-} 
+}
