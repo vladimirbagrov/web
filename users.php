@@ -10,30 +10,15 @@ spl_autoload_register(function ($class) {
     require_once __DIR__ . "/{$classPath}.php";
 });
 
-ob_start(); // Буферизация вывода, чтобы всё вставить в HTML
-
-echo "<div class='section'>";
+// Создаем пользователей
 $user1 = new User("Иван", "ivan123", "12345");
 $user2 = new User("Мария", "maria88", "qwerty");
 $user3 = new User("Петр", "petya77", "pass123");
-
-$user1->showInfo();
-$user2->showInfo();
-$user3->showInfo();
-echo "</div><hr>";
-
-echo "<div class='section'>";
 $superUser = new SuperUser("Анна", "admin1", "rootpass", "Администратор");
-$superUser->showInfo();
 
-echo "</div><hr>";
-
-echo "<div class='section'>";
-echo "Всего обычных пользователей: " . User::$count . "<br>";
-echo "Всего супер-пользователей: " . SuperUser::$count . "<br>";
-echo "</div>";
-
-$content = ob_get_clean(); // Сохраняем вывод в переменную
+// Сохраняем счетчики до удаления
+$userCount = User::$count;
+$superUserCount = SuperUser::$count;
 ?>
 
 <!DOCTYPE html>
@@ -96,13 +81,34 @@ $content = ob_get_clean(); // Сохраняем вывод в переменн�
         color: #ffffff;
         text-align: center;
     }
-</style>
+    </style>
 </head>
 <body>
 
 <h1>🕷 Пользователи 🕷</h1>
 
-<?= $content ?>
+<div class='section'>
+<?php
+$user1->showInfo();
+$user2->showInfo();
+$user3->showInfo();
+unset($user1, $user2, $user3); // Удаляем пользователей сразу после вывода
+?>
+</div><hr>
+
+<div class='section'>
+<?php
+$superUser->showInfo();
+unset($superUser); // Удаляем суперпользователя сразу после вывода
+?>
+</div><hr>
+
+<div class='section'>
+<?php
+echo "Всего обычных пользователей: " . $userCount . "<br>";
+echo "Всего супер-пользователей: " . $superUserCount . "<br>";
+?>
+</div>
 
 </body>
 </html>
