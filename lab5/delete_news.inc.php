@@ -5,7 +5,7 @@ if (isset($_GET['del'])) {
         if (!$news->deleteNews($id)) {
             $errMsg = "Произошла ошибка при удалении новости";
         } else {
-            header("Location: news.php");
+            header("Location: lab5.php");
             exit;
         }
     }

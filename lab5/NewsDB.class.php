@@ -53,5 +53,11 @@ class NewsDB implements IteratorAggregate {
     public function getIterator(): Traversable {
         return new ArrayIterator($this->items);
     }
+
+    public function deleteNews($id) {
+    $id = (int)$id;
+    $sql = "DELETE FROM msgs WHERE id = $id";
+    return $this->_db->exec($sql);
+}
 }
 ?>
