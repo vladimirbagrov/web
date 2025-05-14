@@ -2,93 +2,69 @@
 namespace Project\Controllers;
 use \Core\Controller;
 use \Project\Models\Page;
+use \Project\Models\Pages;
 
-/*
- *   PageController Class, наследованный от класса Controller
- */
 class PageController extends Controller
 {
-    /**
- * @param protected $pages - массив страниц
- * public $title- заголовок
- */
- 
-    public $title;
-    protected $pages = [
-        1 => ['title' => 'Страница 1', 'text' => 'Текст страницы 1'],
-        2 => ['title' => 'Страница 2', 'text' => 'Текст страницы 2'],
-        3 => ['title' => 'Страница 3', 'text' => 'Текст страницы 3']
-    ];
- /*
- * Функция показа страницы
- */   
-    public function show1()
-    {
-        echo '1';
-    }
-/*
- * Функция показа страницы
- */
-    public function show2()
-    {
-        echo '2';
-    }
     
-    /*
- * Функция показа страниц
- * @return $pageData - страница
- */
-    public function show($id)
+    private $pages;
+
+    public function __construct()
     {
-        if (!isset($this->pages[$id])) {
-            throw new Exception("Запрашиваемая страница не найдена");
+        $this->pages = [
+            1 => ['title' => 'страница 1', 'text' => 'текст страницы 1'],
+            2 => ['title' => 'страница 2', 'text' => 'текст страницы 2'],
+            3 => ['title' => 'страница 3', 'text' => 'текст страницы 3'],
+        ];
+    }
+
+    public function show($params)
+    {
+        $id = $params['id'];
+        if (isset($this->pages[$id])) {
+            $this->title = $this->pages[$id]['title'];
+            return $this->render('page/show', [
+                'page' => $this->pages[$id]
+            ]);
+        } else {
+            $this->title = 'Страница не найдена';
+            echo "Страница не найдена";
         }
-        
-        // Получаем нужную страницу
-        $pageData = $this->pages[$id];
-        
-        // Устанавливаем заголовок страницы
-        $this->title = $pageData['title'];
-        
-        // Рендерим представление с передачей текста страницы
-        return $this->render('page/show', [
-            'text' => $pageData['text']
-        ]);
     }
-    
-    public function test() {
-			$page = new Page; // создаем объект модели
+
+
+    public function test() 
+    {
+	$page = new Page; // создаем объект модели
 		
-			$data = $page->getById(3); // получим запись с id=3
-			var_dump($data);
+	$data = $page->getById(3); // получим запись с id=3 
+ 	var_dump($data);
 			
-			$data = $page->getById(5); // получим запись с id=5
-			var_dump($data);
-			
-			$data = $page->getByRange(2, 5); // записи с id от 2 до 5
-			var_dump($data);
-		}
+	$data = $page->getById(5); // получим запись с id=5
+	var_dump($data);
+	
+	$data = $page->getByRange(2, 5); // записи с id от 2 до 5
+	var_dump($data);
+     }
+     public function one($params)
+     {
+	$page = (new Pages) -> getById($params['id']);
 		
-	public function one($params)
-		{
-			$page = (new Page) -> getById($params['id']);
-			
-			$this->title = $page['title'];
-			return $this->render('page/one', [
-				'text' => $page['text'],
-				'h1' => $this->title
-			]);
-		}
+	$this->title = $page['title'];
+	return $this->render('page/one', [
+		'text' => $page['text'],
+		'h1' => $this->title
+		]);
+	}
 		
-		public function all()
-		{
-			$this->title = 'Список всех страниц';
+     public function all()
+     {
+	$this->title = 'Список всех страниц';
 			
-			$pages = (new Page) -> getAll();
-			return $this->render('page/all', [
-				'pages' => $pages,
-				'h1' => $this->title
-			]);
-		}	
-    
+	$pages = (new Pages) -> getAll();
+	return $this->render('page/all', [
+		'pages' => $pages,
+		'h1' => $this->title
+		]);
+      }
 }

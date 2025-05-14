@@ -1,156 +1,32 @@
-body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+        body {
+            background-image: url('hhh.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            color:#ffffff;
         }
-
-        header {
-            background-color: #660066;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            border-bottom: 4px solid #993399;
-        }
-
-        h1, h2, h3 {
-            color: #660066;
-            text-align: left;
-            
-        }
-
-        b {
-            color: #993399;
-        }
-
+        
+        /* Грид-контейнер: 3 колонки (левый сайдбар, контент, правый сайдбар) */
         .container {
-            display: flex;
-            margin: 2rem;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
-        aside.sidebar {
-            width: 20%;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        main {
-            flex: 1;
-            margin: 0 1rem;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 2rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            gap: 20px;                /* отступы между колонками */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
         }
         
-        p a {
-           text-decoration: none;
-            color: #660066;
-            transition: color 0.3s; 
-        }
-        
-        p a:hover {
-            color: #993399;
-        }
-        
-        a {
-           text-decoration: none;
-            color: #660066;
-            transition: color 0.3s; 
-        }
-        
-        a:hover {
-            color: #FFFFFF;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 10px 0;
-            position: relative;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #660066;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #993399;
-        }
-
-        .sub-menu {
-            display: none;
-            margin-left: 15px;
-            background-color: #f9f9f9;
-            border-left: 3px solid #993399;
+        /* Сайдбары — фиксированная ширина, фон и паддинги */
+        .sidebar {
+            background-color: #f0f0f0;
             padding: 10px;
-            border-radius: 3px;
-        }
-
-        nav ul li:hover .sub-menu {
-            display: block;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #993399;
-        }
-        th {
-            background-color: #660066;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #993399;
-            color: white;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #660066;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 20px;
-        }
-         .header-image {
-            width: 70px; 
-            height: auto; 
-            vertical-align: middle; 
-            margin-right: 10px;
-            display: inline-block;
         }
         
-         .image-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .image-container img {
-            max-width: 80%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
+        /* Явно указываем, в какую колонку каждый блок */
+        .sidebar.left  { grid-column: 1; }
+        main           { grid-column: 2; }
+        .sidebar.right { grid-column: 3; }
